@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>003</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            font-family:'Courier New', Courier, monospace;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(73, 72, 72);
+            transition: .3s;
+        }
+        a:hover{
+            color: white;
+        }
+        /* 上方列 */
+        .wrap{
+            display: flex;
+            background-color: rgba(152, 151, 151, 0.6);
+            font-size: 1.3em;
+            justify-content: space-between;
+            padding: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            /* position: fixed; */
+        }
+        .item1{
+            padding: 0 10px;
+        }
+        .item2{
+            padding: 0 10px;
+        }
+        .item3{
+            padding: 0 10px;
+        }
+        .item4{
+            padding: 0 10px;
+        }
+        .item5{
+            padding: 0 10px;
+        }
+        /* 中間區 */
+        .back{
+            background: linear-gradient(rgba(152, 151, 151, 0.6), rgba(171, 201, 207, 1));
+        }
+        .main{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 4px;
+        }
+        .item{
+            width: 25%;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+        .item img{
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+            border-radius: 10%;
+        }
+        .item .txt{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(36, 35, 35, 0.6);
+            height: 190px;
+            border-radius: 10%;
+            opacity: 0;
+            transition: opacity .6s;
+        }
+        .item .txt:hover{
+            opacity: 1;
+        }
+        .item .txt h2{
+            font-size: 1.8em;
+            padding: 17px 17px 8px 17px;
+            color: aliceblue;
+            font-weight: 500;
+        }
+        .item .txt p{
+            color: rgb(254, 254, 253);
+            padding: 10px 8px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        .time{
+            display: flex;
+            justify-content: end;
+        }
+        .other{
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            background: linear-gradient(115deg, rgba(171, 201, 207, 1) 43%, transparent 80%) center center /100% 100%,
+            url("https://picsum.photos/1300/600?random5") right center / 110%;
+        }
+        .other .txt{
+            height: 100%;
+            display: flex;
+            flex-direction: column;/*排直的*/
+            justify-content: center;/*在中間*/
+            align-items: flex-start;/*直線不填滿*/
+        }
+        .other .txt h2{
+            border-bottom: 1px solid rgb(96, 96, 96);
+            font-size: 40px;
+            font-weight: 400;
+        }
+        .other .txt h2 small{
+            font-size: 25px;
+        }
+        .other .txt p{
+            padding-top: 5px;
+            font-size: 18px;
+        }
+        /* 下方列 */
+        .main-footer{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: rgba(152, 151, 151, 0.6);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <a href="practice1.html"><i class="fa-regular fa-face-smile"></i></a> 
+        <div class="item0">
+            <a class="item1" href="practice2.html">Home</a>  /
+            <a class="item2" href="practice2.html">Interest</a>
+            <a class="item3" href="https://www.facebook.com/profile.php?id=100001616662382" target="_blank"><i class="fa-brands fa-facebook"></i></a>   
+            <a class="item4" href="https://www.instagram.com/s930175/" target="_blank"><i class="fa-brands fa-instagram-square"></i></a> 
+            <a class="item5" href="mailto:s930175@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+    </div>
+    <!-- 中間 -->
+    <div class="back">
+        <div class="main">
+            <div class="item">
+                <img src="img/6.jpg" alt="">
+                <div class="txt">
+                    <h2>旅遊</h2><hr>
+                    <p>台東 鐵花村<br>夜晚燈光美氣氛佳的鐵花村</p><br><br>
+                    <p class="time">2022.02.20</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/7.jpg" alt="">
+                <div class="txt">
+                    <h2>美食</h2><hr>
+                    <p>偶爾和友人相約聚餐吃燒肉<br>吃燒肉長肥肉σ`∀´)σ</p><br><br>
+                    <p class="time">2021.08.14</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/8.jpg" alt="">
+                <div class="txt">
+                    <h2>宅物</h2><hr>
+                    <p>黏土人、一些景品<br>宅一下有益身心健康</p><br><br>
+                    <p class="time">2022.04.02</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/9.jpg" alt="">
+                <div class="txt">
+                    <h2>遊戲</h2><hr>
+                    <p>龍族幻想 純手工打造家園<br>買不起房只好在遊戲裡自己蓋</p><br><br>
+                    <p class="time">2020.09.18</p>
+                </div>
+            </div>
+        </div>
+        <!-- 中間2 -->
+        <div class="other">
+            <div class="txt">
+                <h2>哈囉你好嗎<br>
+                    <small>我還沒想好要放甚麼</small>
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>Ea quam vero, ipsam modi nemo in.</p>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer class="main-footer">
+        ©smile 2022 by vscode
+    </footer>
+</body>
+</html>
